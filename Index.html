@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+    form{
+        width:300px;
+        background-color: dodgerblue;
+        padding: 10px 10px 10px 10px;
+        margin:0 auto;
+    }
+</style>
+</head>
+<body>
+<form id="snack-drink">
+<p>Select a snack:</p>
+<br>
+<select id="snack" onchange = "snackSelection()">
+<option value="none">None</option>
+    <option value="cookies">Cookies</option>
+    <option value="chips">Chips</option>
+    <option value="cupcakes">Cupcakes</option>
+    <option value="popcorn">Popcorn</option>
+    <option value="other">Other</option>
+    
+</select>
+<br>
+<p>Select a drink:</p>
+<br>
+<select id="drink">
+<option value="none1">None</option>
+    <option value="water">Water</option>
+    <option value="orange-juice"> Orange Juice</option>
+    <option value="coke">Coke</option>
+    <option value="pepsi">Pepsi</option>
+    <option value="other1">Other</option>
+    
+</select>
+</form>
+<p id="snack-select">You have selected: <strong>NONE</strong></p>
+<p id="drink-select">You have selected: <strong>NONE</strong></p>
+
+<script>
+
+function snackSelection() {
+
+const selectedSnack=document.getElementById("snack").value
+document.getElementById("snack-select").innerHTML="You have selected: "+"<strong>" +selectedSnack+"</strong>"
+}
+
+</script>
+
+
+
+</body>
+</html>
